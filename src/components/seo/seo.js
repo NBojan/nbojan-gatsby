@@ -23,6 +23,10 @@ const SEO = ({ title, description, pathname, children }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
+      <meta name="og:title" content={seo.title} />
+      <meta name="og:url" content={seo.url} />
+      <meta name="og:description" content={seo.description} />
+      <meta name="og:image" content={seo.image} />
       <link rel="icon" href="/favicon.ico" />
       {children}
     </>
