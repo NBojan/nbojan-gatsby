@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import errorImg from "../assets/images/stars.svg";
 import { Link } from "gatsby";
+import { SEO } from "../components";
 
 const ErrorPage = () => {
     return (  
@@ -17,7 +18,9 @@ const ErrorPage = () => {
         </Wrapper>
     );
 }
- 
+export const Head = () => (
+    <SEO title="Error" />
+)
 const Wrapper = styled.section`
     display: flex;
     align-items: center;

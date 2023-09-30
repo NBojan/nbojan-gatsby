@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutOne, AboutTwo } from "../components";
+import { AboutOne, AboutTwo, SEO } from "../components";
 
 const About = () => {
     return (  
@@ -9,5 +9,8 @@ const About = () => {
         </>
     );
 }
- 
+export const Head = () => (
+    <SEO title="About" pathname="/about" />
+)
+
 export default About;

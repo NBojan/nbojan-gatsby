@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { SEO } from "../components";
 
 const ContactPage = () => {
     return (  
@@ -32,7 +33,10 @@ const ContactPage = () => {
         </Wrapper>
     );
 }
- 
+export const Head = () => (
+    <SEO title="Contact" pathname="/contact" />
+)
+
 const Wrapper = styled.section`
     display: flex;
     padding: 32px 0;

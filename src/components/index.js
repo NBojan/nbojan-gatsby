@@ -11,6 +11,7 @@ import Projects from "./homepage/Projects";
 import Card from "./homepage/Card";
 import AllProjects from "./homepage/AllProjects";
 import Filters from "./homepage/Filters";
+import SEO from "./seo/seo";
 
 export {
   Footer,
@@ -25,5 +26,6 @@ export {
   Projects,
   Card,
   AllProjects,
-  Filters
+  Filters,
+  SEO
 };

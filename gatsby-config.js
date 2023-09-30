@@ -16,8 +16,9 @@ module.exports = {
     title: `NBojan Project / Portfolio Page with Gatsby`,
     description: `Project / Portfolio Page, created using Gatsby / React, Airtable. Uploaded with Netlify.`,
     author: `@nbojan`,
-    url: `https://nbojan.netlify.app/`,
+    siteUrl: `https://nbojan.netlify.app`,
     twitterUsername: `@Trojka33`,
+    image: `/image.png`,
   },
   plugins: [
     `gatsby-plugin-image`,
