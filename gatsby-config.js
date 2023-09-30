@@ -18,7 +18,7 @@ module.exports = {
     author: `@nbojan`,
     siteUrl: `https://nbojan-gatsby.netlify.app`,
     twitterUsername: `@Trojka33`,
-    image: `/image.png`,
+    image: `/image2.png`,
   },
   plugins: [
     `gatsby-plugin-image`,
