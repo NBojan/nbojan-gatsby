@@ -40,6 +40,7 @@ const AllProjects = () => {
 }
 
 const Wrapper = styled.section`
-    background: linear-gradient(5deg, rgba(81,81,93,1) 50%, var(--clr-darkmode2) 50%);
+  background-color: #2a5078;
+    /* background: linear-gradient(5deg, rgba(81,81,93,1) 50%, var(--clr-darkmode2) 50%); */
 `
 export default AllProjects;
