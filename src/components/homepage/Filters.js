@@ -22,9 +22,13 @@ const Filters = ({ filterProjects }) => {
     }
 
     return (  
-        <Wrapper>
+        <Wrapper className="space-x-2 xs:space-x-3">
             {types.map((type, btnIndex) => (
-                <button type="button" className={`btn btn-m btn-prim ${btnIndex === index ? "active" : ""}`} onClick={() => filtering(btnIndex, type)} key={btnIndex}>
+                <button 
+                  type="button" 
+                  className={`btn capitalize btn-prim ${btnIndex === index ? "active" : ""} hover:scale-110`} 
+                  onClick={() => filtering(btnIndex, type)} key={btnIndex}
+                >
                     {type}
                 </button>
             ))}
@@ -38,11 +42,16 @@ const Wrapper = styled.div`
     margin-bottom: 32px;
 
     button {
-        margin-right: 12px;
-        text-transform: capitalize;
+        padding: 4px 6px;
+        font-size: 14px;
+        letter-spacing: 1px;
     }
-    button:hover {
-        transform: scale(1.1);
+    @media (min-width: 300px){
+        button {
+            padding: 6px 8px;
+            font-size: 15px;
+            letter-spacing: 1.2px;
+        }
     }
     .active {
         transform: scale(1.1);
