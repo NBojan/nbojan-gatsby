@@ -48,9 +48,15 @@
   --bodyFont: 'Cabin', Sans-Serif;
 }
 /**/
-.btn-s { @apply px-1 py-1.5 text-sm tracking-normal }
-.btn-m { @apply px-1.5 py-2 text-[15px] tracking-wide }
-.btn-l { @apply px-2 py-4 text-base tracking-wider }
+.btn-s { @apply px-1.5 py-1 text-sm tracking-normal }
+.btn-m { @apply px-2 py-1.5 text-[15px] tracking-wide }
+.btn-l { @apply px-4 py-2 text-base tracking-wider }
+.btn-prim { @apply text-white bg-indigo-500 border-indigo-500 }
+.btn-prim:hover { @apply bg-indigo-400 border-indigo-400 }
+.btn-primDark { @apply text-white bg-indigo-800 border-indigo-800 }
+.btn-primDark:hover { @apply bg-indigo-900 border-indigo-900 }
+.git-btn { @apply text-white bg-[#171515] border-[#171515] }
+.git-btn:hover { @apply text-black bg-[#e8eaea] border-[#e8eaea] }
 
 body {
   line-height: 1.5;
@@ -184,8 +190,8 @@ h5 { font-size: 14px; }
 
 .btn {
 	display: inline-block;
-	background-color: transparent;
-	border: 1px solid transparent;
+	border-width: 1px;
+    border-style: solid;
 	outline: none;
 	border-radius: 4px;
 	user-select: none;
@@ -193,15 +199,7 @@ h5 { font-size: 14px; }
 	cursor: pointer;
 	transition: .2s all ease;
 }
-.btn-prim {
-	color: #fff;
-	background-color: var(--clr-primary-5);
-	border-color: var(--clr-primary-5);
-}
-.btn-prim:hover {
-	background-color: var(--clr-primary-4);
-	border-color: var(--clr-primary-4);
-}
+
 .btn-blue {
 	color: #fff;
 	background-color: #007bff;

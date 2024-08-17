@@ -1,12 +1,12 @@
 import * as React from "react"
-import { Hero, Featured, AllProjects, SEO } from "../components";
+import { HomeHero, FeaturedProjects, FeaturedQaProjects, SEO } from "../components";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Featured />
-      <AllProjects />
+      <HomeHero />
+      <FeaturedProjects />
+      <FeaturedQaProjects />
     </>
   );
 }

@@ -1,25 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { ProjectsContainer } from "../../components";
+import { ProjectsContainer } from "..";
 import { useStaticQuery, graphql } from "gatsby";
 
 const query = graphql`
-  query {
-    allAirtable {
+  {
+    allAirtable(filter: {data: {}, table: {eq: "testing"}}) {
       nodes {
         data {
           name
           type
           descr
           gitUrl
-          url
           featured
           images {
             localFiles {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED)
               }
-              id
             }
           }
         }
@@ -29,18 +27,17 @@ const query = graphql`
   }
 `
 
-const AllProjects = () => {
+const AllProjectsWeb = () => {
     const { allAirtable: {nodes:projects} } = useStaticQuery(query);
 
     return (  
         <Wrapper className="section">
-            <ProjectsContainer title="NB Projects" projects={projects} showFilters={true} />
+            <ProjectsContainer title="NB Testing Projects" projects={projects} showFilters={false} isQa={true} />
         </Wrapper>
     );
 }
 
 const Wrapper = styled.section`
   background-color: #2a5078;
-    /* background: linear-gradient(5deg, rgba(81,81,93,1) 50%, var(--clr-darkmode2) 50%); */
 `
-export default AllProjects;
+export default AllProjectsWeb;

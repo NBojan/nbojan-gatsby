@@ -4,11 +4,11 @@ import { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 const query = graphql`
-  query {
-    allAirtable {
-      distinct(field: {data: {type: SELECT}})
+    {
+        allAirtable(filter: {table: {eq: "projects"}}) {
+            distinct(field: {data: {type: SELECT}})
+        }
     }
-  }
 `
 
 const Filters = ({ filterProjects }) => {

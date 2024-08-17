@@ -4,13 +4,17 @@ import Sidebar from "./layout/Sidebar";
 import ScrollTop from "./layout/ScrollTop";
 import AboutOne from "./about/AboutOne";
 import AboutTwo from "./about/AboutTwo";
-import Hero from "./homepage/Hero";
-import Featured from "./homepage/Featured";
-import ProjectsContainer from "./homepage/ProjectsContainer";
-import Projects from "./homepage/Projects";
-import Card from "./homepage/Card";
-import AllProjects from "./homepage/AllProjects";
-import Filters from "./homepage/Filters";
+import HomeHero from "./homepage/HomeHero";
+import ProjectsHero from "./projects/ProjectsHero";
+import QaHero from "./qaProjects/QaHero";
+import FeaturedProjects from "./homepage/FeaturedProjects";
+import FeaturedQaProjects from "./homepage/FeaturedQaProjects";
+import ProjectsContainer from "./projects/ProjectsContainer";
+import Projects from "./projects/Projects";
+import Card from "./projects/Card";
+import AllProjectsWeb from "./projects/AllProjectsWeb";
+import AllProjectsQa from "./qaProjects/AllProjectsQa";
+import Filters from "./projects/Filters";
 import SEO from "./seo/seo";
 
 export {
@@ -20,12 +24,16 @@ export {
   AboutOne,
   AboutTwo,
   ScrollTop,
-  Hero,
-  Featured,
+  HomeHero,
+  ProjectsHero,
+  QaHero,
+  FeaturedProjects,
+  FeaturedQaProjects,
   ProjectsContainer,
   Projects,
   Card,
-  AllProjects,
+  AllProjectsWeb,
+  AllProjectsQa,
   Filters,
   SEO
 };

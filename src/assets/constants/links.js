@@ -6,11 +6,21 @@ const links = [
     },
     {
         id: 2,
+        url: "/projects",
+        text: "projects"
+    },
+    {
+        id: 3,
+        url: "/qaprojects",
+        text: "QA projects"
+    },
+    {
+        id: 4,
         url: "/about",
         text: "about"
     },
     {
-        id: 3,
+        id: 5,
         url: "/contact",
         text: "contact"
     },

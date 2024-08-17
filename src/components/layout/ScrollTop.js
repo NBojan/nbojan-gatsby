@@ -10,7 +10,9 @@ const ScrollTop = () => {
 
     return (  
         <Wrapper className={showScrollTop ? "showScroll" : "hideScroll"} onClick={scrollToTop}>
-            <AiOutlineArrowUp />
+            <div>
+                <AiOutlineArrowUp />
+            </div>
         </Wrapper>
     );
 }
@@ -19,15 +21,18 @@ const Wrapper = styled.button`
     position: fixed;
     bottom: 28px;
     right: 28px;
-    font-size: 24px;
-    padding: 8px;
-    border-radius: 50%;
-    border: 1px solid #e8eaea;
-    color: #e8eaea;
     background-color: transparent;
-    transition: all .2s linear;
     cursor: pointer;
-    :hover {
+
+    div {
+        padding: 8px;
+        color: #e8eaea;
+        font-size: 24px;
+        border-radius: 50%;
+        border: 1px solid #e8eaea;
+        transition: all .2s linear;
+    }
+    div:hover {
         color: #222;
         background-color: #e8eaea;
     }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
-const Card = ({ name, descr, gitUrl, images, url, featured }) => {
+const Card = ({ name, descr, gitUrl, images, url, featured, type, isQa }) => {
     const [index, setIndex] = useState(0);
     const [read, setRead] = useState(false);
 
@@ -24,7 +24,7 @@ const Card = ({ name, descr, gitUrl, images, url, featured }) => {
                     let order = 'next';
                     if(imgIndex === index) order = "active";
                     if((imgIndex === index - 1) || (index === 0 && imgIndex === images.length - 1)) order = "previous";
-                    return <GatsbyImage image={getImage(img)} alt="Preview" className={`card-image ${order}`} key={img.id} />
+                    return <GatsbyImage image={getImage(img)} alt="Preview" className={`card-image ${order}`} key={imgIndex} />
                 })}
                 <div className="chevs">
                     <button type="button" className="chev-btn" onClick={prevImg}><BsChevronLeft /></button>
@@ -34,7 +34,8 @@ const Card = ({ name, descr, gitUrl, images, url, featured }) => {
 
             <div className="info-div">
                 <header>
-                    <h3 className={featured ? "card-title featured" :`card-title`}>{name}{featured && "*"}</h3>
+                    <h3 className={featured ? "card-title featured" :`card-title`}>{name}</h3>
+                    {isQa && <p className="capitalize mb-1">{type}</p>}
                     <p className="desc">
                         <span className={read ? "line-clamp-none" : "line-clamp-2"}>{descr}</span>
                         <span className="read-more" onClick={() => setRead(!read)}>{read ? "read less" : "read more"}</span>
@@ -42,7 +43,7 @@ const Card = ({ name, descr, gitUrl, images, url, featured }) => {
                 </header>
                 <footer>
                     <a href={gitUrl} target="_blank" rel="noreferrer" className="btn btn-s git-btn">Github</a>
-                    <a href={url} target="_blank" rel="noreferrer" className="btn btn-s btn-prim">Visit</a>
+                    {!isQa && <a href={url} target="_blank" rel="noreferrer" className="btn btn-s btn-prim">Visit</a>}
                 </footer>
             </div>
         </Wrapper>
@@ -151,17 +152,6 @@ const Wrapper = styled.div`
     }
     footer a:hover {
         transform: scale(1.1);
-    }
-
-    .git-btn {
-        color: #fff;
-	    background-color: #171515;
-	    border-color: #171515;
-    }
-    .git-btn:hover {
-        color:#000;
-        background-color: #e8eaea;
-	    border-color: #e8eaea;
     }
 
     @media (min-width: 1400px){

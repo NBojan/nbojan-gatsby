@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby"
-import { ProjectsContainer } from "../../components";
+import { ProjectsContainer } from "..";
+import { useStaticQuery, graphql } from "gatsby";
 
 const query = graphql`
-  query {
-    allAirtable(filter: {data: {featured: {eq: true}}}, limit: 3) {
+  {
+    allAirtable(filter: {data: {}, table: {eq: "projects"}}) {
       nodes {
         data {
-          descr
           name
+          type
+          descr
           gitUrl
           url
           featured
@@ -28,17 +29,17 @@ const query = graphql`
   }
 `
 
-const Featured = () => {
-    const { allAirtable: {nodes:featuredProjects} } = useStaticQuery(query);
+const AllProjectsWeb = () => {
+    const { allAirtable: {nodes:projects} } = useStaticQuery(query);
 
     return (  
         <Wrapper className="section">
-            <ProjectsContainer title="featured" projects={featuredProjects} />
+            <ProjectsContainer title="NB Web Projects" projects={projects} showFilters={true} isQa={false} />
         </Wrapper>
     );
 }
- 
+
 const Wrapper = styled.section`
-    background-color: var(--clr-primary-4);
+  background-color: #2a5078;
 `
-export default Featured;
+export default AllProjectsWeb;

@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import heroImg from "../../assets/images/programming.svg";
+import heroImg from "../../assets/images/thinking.svg";
 
-const Hero = () => {
+const HomeHero = () => {
     return (  
         <Wrapper className="hero bg-filler">
             <article className="containerBoot mx-auto articleContainer w-full flex items-center justify-between">
                 <div className="info-div">
-                    <h2 className="capitalize font-semibold">Project page <span>NBojan</span></h2>
+                    <h2 className="capitalize font-semibold"><span>NBojan</span> web projects</h2>
                     <p className="text-gray-600">
-                        Welcome! NB Projects is a web page that displays different projects made for the purpose of presenting my work.
-                        Links available to visit or check out the source code on Github.
+                        Here, you'll find a collection of my web development projects, showcasing my skills in creating dynamic, responsive, and user-friendly websites.
                     </p>
                 </div>
 
@@ -26,7 +25,7 @@ const Wrapper = styled.section`
     display: flex;
     min-height: 100vh;
     padding: 7rem 0 2rem;
-    background: linear-gradient(90deg, var(--clr-primary-1) 60%, rgba(255,255,255,1) 60%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, var(--clr-primary-1) 50%);
 
     .image-div {
         flex-basis: 50%;
@@ -77,4 +76,4 @@ const Wrapper = styled.section`
         }
     }
 `
-export default Hero;
+export default HomeHero;

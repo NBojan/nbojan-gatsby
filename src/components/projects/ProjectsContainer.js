@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Projects, Filters } from "../../components";
 
-const ProjectsContainer = ({ title="default", projects=[], showFilters }) => {
+const ProjectsContainer = ({ title="default", projects=[], showFilters, isQa }) => {
     const [displayedProjects, setDisplayedProjects] = useState([...projects]);
 
     const filterProjects = (type) => {
@@ -19,13 +19,13 @@ const ProjectsContainer = ({ title="default", projects=[], showFilters }) => {
     return (  
         <Wrapper className="containerBoot mx-auto">
             <div className="text-center mb-10">
-                <h2 className="mb-4 text-white capitalize font-semibold">{title}</h2>
+                <h2 className="mb-4 text-white capitalize font-semibold tracking-normal">{title}</h2>
                 <div className="underline-nb mx-auto !bg-white"></div>
             </div>
 
             {showFilters && <Filters filterProjects={filterProjects} />}
 
-            <Projects selectedProjects={displayedProjects} />
+            <Projects selectedProjects={displayedProjects} isQa={isQa} />
         </Wrapper>
     );
 }
